@@ -1,0 +1,5 @@
+opencv-python==4.6.0.66
+opencv-contrib-python==4.9.0.80
+mediapipe==0.8.11
+msvc-runtime==14.34.31931
+PyAutoGUI==0.9.54
