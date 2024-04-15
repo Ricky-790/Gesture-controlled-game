@@ -25,7 +25,7 @@ hands_module = mp.solutions.hands
 
 initial_position= None 
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 hand_detector = mp.solutions.hands.Hands(max_num_hands = 1) # looks for hand
 drawing_utils = mp.solutions.drawing_utils #Traces the hand
 while True:
