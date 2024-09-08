@@ -1,6 +1,7 @@
 import cv2
 import mediapipe as mp
 import pyautogui
+import os
 
 def get_finger_status(hands_module, hand_landmarks, frame_height, frame_width): #Function to check if fingers are joined or not
 
@@ -25,10 +26,12 @@ hands_module = mp.solutions.hands
 
 initial_position= None 
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 hand_detector = mp.solutions.hands.Hands(max_num_hands = 1) # looks for hand
 drawing_utils = mp.solutions.drawing_utils #Traces the hand
+os.startfile("C:/Users/wwwri/OneDrive/Desktop/VS/Game.exe")
 while True:
+    
     _, frame=cap.read()
     frame = cv2.flip(frame, 1) #corrects mirror images
     frame_height, frame_width, _ = frame.shape
@@ -65,5 +68,5 @@ while True:
                 initial_position=location #Update position
                 
 
-    cv2.imshow('Virtual Mouse', frame) #Displays the frame
+    cv2.imshow('Screen', frame) #Displays the frame
     cv2.waitKey(1)
